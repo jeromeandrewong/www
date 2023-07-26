@@ -18,8 +18,8 @@ const navItems = [
         href: "/",
     },
     {
-        title: "Experiences",
-        href: "/experiences",
+        title: "Work",
+        href: "/work",
     },
     {
         title: "Blog",
@@ -41,7 +41,7 @@ export default function Nav() {
                                         className={cn(
                                             navigationMenuTriggerStyle(),
                                             item.href === `/${segment}`
-                                                ? "bg-primary_text dark:bg-dark_primary"
+                                                ? "bg-zinc-200 decoration-wavy underline underline-offset-4 dark:bg-dark_primary"
                                                 : "",
                                         )}
                                     >

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply dark:bg-zinc-950;
+    @apply dark:bg-zinc-950 font-poppins;
 }
