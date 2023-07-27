@@ -18,8 +18,8 @@ export default function RootLayout({
         <html lang="en">
             <body>
                 <Providers>
-                    <main className="relative flex max-h-screen min-h-screen flex-col items-center bg-primary dark:bg-zinc-950/40">
-                        <div className="flex h-full w-full flex-col max-w-2xl">
+                    <main className="relative mt-5 flex max-h-screen min-h-screen flex-col items-center bg-primary dark:bg-zinc-950/40">
+                        <div className="flex h-full w-full max-w-2xl flex-col">
                             <Nav />
                             <div className="mt-20 px-5">{children}</div>
                         </div>

@@ -31,7 +31,7 @@ export default function Nav() {
     if (segment === null) segment = "";
     return (
         <div className="flex justify-center">
-            <NavigationMenu className="p-2 w-full fixed  rounded-md mt-2 border-2 border-secondary">
+            <NavigationMenu className="fixed mt-2 w-full  rounded-md border-2 border-secondary p-2">
                 <NavigationMenuList>
                     {navItems.map((item, idx) => {
                         return (
@@ -41,7 +41,7 @@ export default function Nav() {
                                         className={cn(
                                             navigationMenuTriggerStyle(),
                                             item.href === `/${segment}`
-                                                ? "bg-zinc-200 decoration-wavy underline underline-offset-4 dark:bg-dark_primary"
+                                                ? "bg-zinc-200 underline decoration-wavy underline-offset-4 dark:bg-dark_primary"
                                                 : "",
                                         )}
                                     >
@@ -67,7 +67,7 @@ const ListItem = React.forwardRef<
                 <a
                     ref={ref}
                     className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        "hover:text-accent-foreground focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent focus:bg-accent",
                         className,
                     )}
                     {...props}
@@ -75,7 +75,7 @@ const ListItem = React.forwardRef<
                     <div className="text-sm font-medium leading-none">
                         {title}
                     </div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
                         {children}
                     </p>
                 </a>
