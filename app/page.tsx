@@ -2,8 +2,40 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
+const contactLinks = [
+    {
+        poc: "Linkedin",
+        url: "https://www.linkedin.com/in/jeromeandrewong/",
+        username: "jeromeandrewong",
+    },
+    {
+        poc: "Github",
+        url: "https://www.github.com/@jeromeandrewong",
+        username: "jeromeandrewong",
+    },
+    {
+        poc: "Twitter",
+        url: "https://twitter.com/jeromeandrewong",
+        username: "jeromeandrewong",
+    },
+    {
+        poc: "CV",
+        url: "https://drive.google.com/file/d/1q545NHGGgZB-MFQVU6_QlT7ehiN8p8ii/view?usp=sharing",
+        username: "jerome",
+    },
+    {
+        poc: "Email",
+        url: "mailto:jeromewongjh@gmail.com",
+        username: "jeromewongjh",
+    },
+    {
+        poc: "Food Blog",
+        url: "eatandeat.jeromeandre.dev",
+        username: "eatandeat",
+    },
+];
 export default function Home() {
-  return (
+    return (
         <div className="mt-10 flex flex-col items-start gap-y-10">
             {/* profile section */}
             <div className="flex w-full justify-center gap-x-3 p-3">
@@ -25,13 +57,28 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-      </div>
-      <div className='text-6xl font-bold tracking-wider text-secondary dark:text-dark_secondary'>
-        Secondary
-      </div>
-      <div className='text-6xl font-bold tracking-wider text-primary_text dark:text-dark_primary_text'>
-        Primary
-      </div>
-    </div>
-  )
+            {/* contact section */}
+            <div className=" w-full p-3">
+                <h1 className=" text-md  mb-4 text-secondary">Contact</h1>
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                    {contactLinks.map((link) => {
+                        return (
+                            <div key={link.poc}>
+                                <h1>{link.poc}</h1>
+                                <div className="flex text-zinc-500 decoration-wavy hover:cursor-alias hover:text-secondary hover:underline hover:underline-offset-8">
+                                    <Link
+                                        className="flex text-sm sm:text-base "
+                                        target="_blank"
+                                        href={link.url}
+                                    >
+                                        {link.username} <ArrowUpRight />
+                                    </Link>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        </div>
+    );
 }
