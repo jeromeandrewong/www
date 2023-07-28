@@ -41,7 +41,7 @@ export default function Nav() {
                                         className={cn(
                                             navigationMenuTriggerStyle(),
                                             item.href === `/${segment}`
-                                                ? "bg-stone-200  underline decoration-wavy underline-offset-4 dark:bg-zinc-800"
+                                                ? "bg-secondary/20  underline decoration-wavy underline-offset-4 dark:bg-secondary/30"
                                                 : "",
                                         )}
                                     >
