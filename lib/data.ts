@@ -10,6 +10,11 @@ export const contactLinks = [
         username: "jeromeandrewong",
     },
     {
+        poc: "Email",
+        url: "mailto:jeromewongjh@gmail.com",
+        username: "jeromewongjh",
+    },
+    {
         poc: "Twitter",
         url: "https://twitter.com/jeromeandrewong",
         username: "jeromeandrewong",
@@ -18,11 +23,6 @@ export const contactLinks = [
         poc: "CV",
         url: "https://drive.google.com/file/d/1q545NHGGgZB-MFQVU6_QlT7ehiN8p8ii/view?usp=sharing",
         username: "jerome",
-    },
-    {
-        poc: "Email",
-        url: "mailto:jeromewongjh@gmail.com",
-        username: "jeromewongjh",
     },
     {
         poc: "Food Blog",
