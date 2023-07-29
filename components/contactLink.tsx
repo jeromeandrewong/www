@@ -12,15 +12,11 @@ type ContactLinkProps = {
 };
 const ContactLink = ({ poc, url, username }: ContactLinkProps) => {
     return (
-        <motion.div variants={fadeDownAnimation}>
+        <motion.div className="text-sm" variants={fadeDownAnimation}>
             <h1>{poc}</h1>
             <div className="flex text-zinc-500 decoration-wavy hover:cursor-alias hover:text-secondary hover:underline hover:underline-offset-8">
-                <Link
-                    className="flex text-sm sm:text-base "
-                    target="_blank"
-                    href={url}
-                >
-                    {username} <ArrowUpRight />
+                <Link className="flex " target="_blank" href={url}>
+                    {username} <ArrowUpRight className="h-5" />
                 </Link>
             </div>
         </motion.div>

@@ -31,7 +31,7 @@ export default function Nav() {
     if (segment === null) segment = "";
     return (
         <div className="flex justify-center">
-            <NavigationMenu className="fixed mt-2 w-full  rounded-md border-2 border-secondary p-2">
+            <NavigationMenu className="fixed mt-2 w-full rounded-md border-2 border-secondary/90 bg-primary/90  p-2 dark:bg-dark_primary/90">
                 <NavigationMenuList>
                     {navItems.map((item, idx) => {
                         return (

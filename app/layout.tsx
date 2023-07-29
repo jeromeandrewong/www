@@ -20,10 +20,10 @@ export default function RootLayout({
             <body>
                 <Providers>
                     <AnimateEnter>
-                        <main className="relative mt-5 flex max-h-screen min-h-screen flex-col items-center">
+                        <main className="relative flex max-h-screen min-h-screen flex-col items-center">
                             <div className="flex h-full w-full max-w-2xl flex-col">
                                 <Nav />
-                                <div className="mt-20 px-5">{children}</div>
+                                <div className="mt-14 sm:mt-20">{children}</div>
                             </div>
                         </main>
                     </AnimateEnter>
