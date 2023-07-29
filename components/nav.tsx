@@ -11,6 +11,7 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { useSelectedLayoutSegment } from "next/navigation";
+import Theme from "./theme";
 
 const navItems = [
     {
@@ -51,6 +52,9 @@ export default function Nav() {
                             </NavigationMenuItem>
                         );
                     })}
+                    <NavigationMenuItem>
+                        <Theme />
+                    </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
         </div>
