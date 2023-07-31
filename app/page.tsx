@@ -65,7 +65,22 @@ const About = () => {
         <div className=" w-full p-3">
             <h1 className=" mb-4 text-lg text-secondary">About Me</h1>
             <div className="flex flex-col gap-4 text-sm text-primary_text dark:text-dark_primary_text">
-                <AnimatedText
+                <p>
+                    Junior at Singapore Management University, pursuing a major
+                    in Information Systems and Quantitative Finance.
+                </p>
+                <p>
+                    I have always explored ways to create unique, fluid and
+                    user-centric web solutions mainly using Typescript. However,
+                    my current interests are in high frequency trading, Golang,
+                    C++ and systems programming.
+                </p>
+                <p>
+                    Passionate about fitness, cafe hopping, and competitive
+                    poker. I am always up for a quick BFT session, or to explore
+                    the latest trendy and overpriced cafe in town.
+                </p>
+                {/* <AnimatedText
                     text="Junior at Singapore Management University, pursuing a major
                     in Information Systems and Quantitative Finance."
                 />
@@ -77,7 +92,7 @@ const About = () => {
                     text="Passionate about fitness, cafe hopping, and competitive poker. I am
                     always up for a quick BFT session, or to
                     explore the latest trendy and overpriced cafe in town."
-                />
+                /> */}
             </div>
         </div>
     );

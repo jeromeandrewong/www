@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useRef, type PropsWithChildren } from "react";
 
 export function AnimateStagger({ children }: PropsWithChildren) {
@@ -18,7 +18,7 @@ export function AnimateStagger({ children }: PropsWithChildren) {
                 hidden: {},
                 show: {
                     transition: {
-                        staggerChildren: 0.25,
+                        staggerChildren: 0.15,
                     },
                 },
             }}
