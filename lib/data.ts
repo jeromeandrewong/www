@@ -26,7 +26,7 @@ export const contactLinks = [
     },
     {
         poc: "Food Blog",
-        url: "eatandeat.jeromeandre.dev",
+        url: "https://eatandeat.jeromeandre.dev",
         username: "eatandeat",
     },
 ];
