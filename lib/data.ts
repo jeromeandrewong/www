@@ -6,7 +6,7 @@ export const contactLinks = [
     },
     {
         poc: "Github",
-        url: "https://www.github.com/@jeromeandrewong",
+        url: "https://www.github.com/jeromeandrewong",
         username: "jeromeandrewong",
     },
     {
@@ -30,3 +30,7 @@ export const contactLinks = [
         username: "eatandeat",
     },
 ];
+export const footerLinks = {
+    url: "https://jeromeandre.dev",
+    github: "https://www.github.com/jeromeandrewong",
+};
