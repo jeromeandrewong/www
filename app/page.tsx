@@ -1,8 +1,8 @@
 import ContactLink from "@/components/contactLink";
 import { AnimateStagger } from "@/components/ui/animateStagger";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { contactLinks } from "@/lib/data";
 import AnimatedText from "@/components/ui/animateText";
+import Image from "next/image";
 
 export default function Home() {
     return (
@@ -18,13 +18,13 @@ const Profile = () => {
     return (
         <div className="flex w-full gap-x-3 p-3">
             <div className="flex items-center justify-center">
-                <Avatar className="h-12 w-12">
-                    <AvatarImage
-                        className="grayscale hover:cursor-alias hover:filter-none"
-                        src="/pp.png"
-                    />
-                    <AvatarFallback>JW</AvatarFallback>
-                </Avatar>
+                <Image
+                    alt="profile picture"
+                    className="rounded-full grayscale hover:cursor-alias hover:filter-none"
+                    src="/pp.png"
+                    width="44"
+                    height="44"
+                />
             </div>
             <div className="flex flex-col justify-center">
                 <div className="text-lg text-primary_text dark:text-dark_primary_text">
