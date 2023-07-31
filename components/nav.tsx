@@ -37,7 +37,7 @@ export default function Nav() {
                     {navItems.map((item, idx) => {
                         return (
                             <NavigationMenuItem key={item.title}>
-                                <Link href={item.href}>
+                                <Link aria-label={item.title} href={item.href}>
                                     <div
                                         className={cn(
                                             navigationMenuTriggerStyle(),

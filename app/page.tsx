@@ -1,7 +1,6 @@
 import ContactLink from "@/components/contactLink";
 import { AnimateStagger } from "@/components/ui/animateStagger";
 import { contactLinks } from "@/lib/data";
-import AnimatedText from "@/components/ui/animateText";
 import Image from "next/image";
 import { Toaster } from "react-hot-toast";
 
@@ -80,19 +79,6 @@ const About = () => {
                     poker. I am always up for a quick BFT session, or to explore
                     the latest trendy and overpriced cafe in town.
                 </p>
-                {/* <AnimatedText
-                    text="Junior at Singapore Management University, pursuing a major
-                    in Information Systems and Quantitative Finance."
-                />
-                <AnimatedText
-                    text="I've always explored ways to create unique, fluid and user-centric web
-                    solutions mainly using Typescript. However, my current interests are in high frequency trading, Golang, C++ and systems programming."
-                />
-                <AnimatedText
-                    text="Passionate about fitness, cafe hopping, and competitive poker. I am
-                    always up for a quick BFT session, or to
-                    explore the latest trendy and overpriced cafe in town."
-                /> */}
             </div>
         </div>
     );

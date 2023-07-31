@@ -9,7 +9,11 @@ const Footer = () => {
     return (
         <div className="mt-10 p-3">
             <div className="flex gap-x-2 text-zinc-500">
-                <Link target="_blank" href={`${footerLinks.github}`}>
+                <Link
+                    aria-label={`Github`}
+                    target="_blank"
+                    href={`${footerLinks.github}`}
+                >
                     <Github className="hover:rotate-6 hover:scale-125 hover:cursor-pointer hover:text-secondary" />
                 </Link>
                 <div onClick={copy}>
