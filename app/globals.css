@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply bg-primary font-poppins dark:bg-dark_primary;
+    @apply bg-primary dark:bg-dark_primary;
 }
