@@ -19,6 +19,7 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             <body>
                 <Providers>
+                    <Toaster />
                     <AnimateEnter>
                         <main className="relative flex max-h-screen min-h-screen flex-col items-center">
                             <div className="flex h-full w-full max-w-2xl flex-col">
