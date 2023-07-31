@@ -3,6 +3,7 @@ import { AnimateStagger } from "@/components/ui/animateStagger";
 import { contactLinks } from "@/lib/data";
 import AnimatedText from "@/components/ui/animateText";
 import Image from "next/image";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             <Profile />
             <Contact />
             <About />
+            <Toaster />
         </div>
     );
 }
