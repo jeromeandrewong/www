@@ -18,3 +18,13 @@ export type TopTracksResponse = {
     url: string;
     artist: string;
 };
+
+export type SiteConfig = {
+    name: string;
+    description: string;
+    url: string;
+    ogImage: string;
+    links: {
+        twitter: string;
+    };
+};

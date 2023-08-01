@@ -24,7 +24,7 @@ const Profile = () => {
                 <Image
                     alt="profile picture"
                     className="rounded-full grayscale hover:cursor-alias hover:filter-none"
-                    src="/pp.png"
+                    src="/pp.jpg"
                     width="44"
                     height="44"
                 />
