@@ -15,7 +15,7 @@ const ContactLink = ({ poc, url, username }: ContactLinkProps) => {
     return (
         <motion.div className="text-sm" variants={fadeDownAnimation}>
             <h1>{poc}</h1>
-            <div className="flex text-zinc-500 decoration-wavy hover:cursor-alias hover:text-secondary hover:underline hover:underline-offset-8">
+            <div className="flex text-zinc-500 decoration-wavy hover:cursor-pointer hover:text-secondary hover:underline hover:underline-offset-8">
                 {poc === "Email" ? (
                     <div
                         className="flex"

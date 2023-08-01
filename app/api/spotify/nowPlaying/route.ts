@@ -2,7 +2,6 @@ import type { NextRequest } from "next/server";
 import { getNpOrRpSong } from "../../../../lib/spotify";
 
 export async function GET(req: NextRequest) {
-    // return new Response("hi");
     const resp = await getNpOrRpSong();
     if (resp.status !== 200) {
         return new Response(JSON.stringify(await resp.json()), {

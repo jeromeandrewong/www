@@ -7,7 +7,7 @@ import { copy } from "@/lib/utils";
 
 const Footer = () => {
     return (
-        <div className="mt-10 p-3">
+        <div className="my-5 p-3">
             <div className="flex gap-x-2 text-zinc-500">
                 <Link
                     aria-label={`Github`}

@@ -1,4 +1,5 @@
 import ContactLink from "@/components/contactLink";
+import Footer from "@/components/footer";
 import { AnimateStagger } from "@/components/ui/animateStagger";
 import { contactLinks } from "@/lib/data";
 import Image from "next/image";
@@ -10,6 +11,7 @@ export default function Home() {
             <Profile />
             <Contact />
             <About />
+            {/* <Footer /> */}
             <Toaster />
         </div>
     );
