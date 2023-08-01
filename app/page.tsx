@@ -46,16 +46,18 @@ const Contact = () => {
         <div className=" w-full rounded-lg p-3">
             <h1 className=" mb-4 text-lg text-secondary">Contact</h1>
             <AnimateStagger>
-                {contactLinks.map((link) => {
-                    return (
-                        <ContactLink
-                            key={link.poc}
-                            poc={link.poc}
-                            url={link.url}
-                            username={link.username}
-                        />
-                    );
-                })}
+                <div className="grid grid-cols-2 gap-3 xl:grid-cols-3">
+                    {contactLinks.map((link) => {
+                        return (
+                            <ContactLink
+                                key={link.poc}
+                                poc={link.poc}
+                                url={link.url}
+                                username={link.username}
+                            />
+                        );
+                    })}
+                </div>
             </AnimateStagger>
         </div>
     );

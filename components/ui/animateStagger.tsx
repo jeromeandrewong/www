@@ -9,7 +9,7 @@ export function AnimateStagger({ children }: PropsWithChildren) {
     return (
         <motion.div
             ref={ref}
-            className="grid grid-cols-2 gap-3 xl:grid-cols-3"
+            className=""
             initial="hidden"
             animate={mainControls}
             whileInView="show"
