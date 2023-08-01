@@ -36,7 +36,7 @@ const experiences = [
     {
         location: "XSQUARE Tuition Centre",
         role: "Software Engineer Intern",
-        date: "Jan 2023 - Apr 2023",
+        date: "Nov 2021 - Jan 2022",
         tech: [
             { link: "react", title: "React" },
             { link: "javascript", title: "Javascript" },
