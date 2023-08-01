@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import { getNpOrRpSong } from "../../../lib/spotify";
+import { getNpOrRpSong } from "../../../../lib/spotify";
 
 export async function GET(req: NextRequest) {
     // return new Response("hi");
