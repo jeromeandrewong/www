@@ -1,3 +1,5 @@
+import { Home, TerminalSquare, Pencil, Headphones } from "lucide-react";
+
 export const contactLinks = [
     {
         poc: "Linkedin",
@@ -34,3 +36,26 @@ export const footerLinks = {
     url: "https://jeromeandre.dev",
     github: "https://www.github.com/jeromeandrewong",
 };
+
+export const navLinks = [
+    {
+        title: "Home",
+        href: "/",
+        icon: Home,
+    },
+    {
+        title: "Work",
+        href: "/work",
+        icon: TerminalSquare,
+    },
+    {
+        title: "Blog",
+        href: "/blog",
+        icon: Pencil,
+    },
+    {
+        title: "Spotify",
+        href: "/spotify",
+        icon: Headphones,
+    },
+];

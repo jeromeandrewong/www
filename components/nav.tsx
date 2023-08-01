@@ -12,21 +12,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import { useSelectedLayoutSegment } from "next/navigation";
 import Theme from "./theme";
+import { navLinks } from "@/lib/data";
 
-const navItems = [
-    {
-        title: "Home",
-        href: "/",
-    },
-    {
-        title: "Work",
-        href: "/work",
-    },
-    {
-        title: "Blog",
-        href: "/blog",
-    },
-];
 export default function Nav() {
     let segment = useSelectedLayoutSegment();
     if (segment === null) segment = "";
@@ -34,7 +21,7 @@ export default function Nav() {
         <div className="flex justify-center">
             <NavigationMenu className="fixed mt-2 w-full rounded-md border-2 border-secondary/90 bg-primary/90  p-2 dark:bg-dark_primary/90">
                 <NavigationMenuList>
-                    {navItems.map((item, idx) => {
+                    {navLinks.map((item) => {
                         return (
                             <NavigationMenuItem key={item.title}>
                                 <Link aria-label={item.title} href={item.href}>
@@ -46,7 +33,7 @@ export default function Nav() {
                                                 : "",
                                         )}
                                     >
-                                        {item.title}
+                                        <item.icon />
                                     </div>
                                 </Link>
                             </NavigationMenuItem>
