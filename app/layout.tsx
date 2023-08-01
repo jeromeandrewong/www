@@ -1,11 +1,11 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { Providers } from "./Providers";
 import Nav from "@/components/nav";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/footer";
 import { siteConfig } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
     title: {
@@ -63,6 +63,7 @@ export default function RootLayout({
                     </main>
                 </Providers>
             </body>
+            <Analytics />
         </html>
     );
 }
