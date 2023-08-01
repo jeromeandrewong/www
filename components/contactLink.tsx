@@ -1,7 +1,8 @@
 "use client";
 import { fadeDownAnimation } from "@/lib/framerMotionVariants";
+import { copy } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ClipboardCopy } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -15,14 +16,25 @@ const ContactLink = ({ poc, url, username }: ContactLinkProps) => {
         <motion.div className="text-sm" variants={fadeDownAnimation}>
             <h1>{poc}</h1>
             <div className="flex text-zinc-500 decoration-wavy hover:cursor-alias hover:text-secondary hover:underline hover:underline-offset-8">
-                <Link
-                    aria-label={poc}
-                    className="flex "
-                    target="_blank"
-                    href={url}
-                >
-                    {username} <ArrowUpRight className="h-5" />
-                </Link>
+                {poc === "Email" ? (
+                    <div
+                        className="flex"
+                        onClick={() => copy(username + "@gmail.com", "Email")}
+                    >
+                        {username}
+                        <ClipboardCopy className="h-5" />
+                    </div>
+                ) : (
+                    <Link
+                        aria-label={poc}
+                        className="flex "
+                        target="_blank"
+                        href={url}
+                    >
+                        {username}
+                        <ArrowUpRight className="h-5" />
+                    </Link>
+                )}
             </div>
         </motion.div>
     );

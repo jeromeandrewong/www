@@ -2,8 +2,8 @@
 import { Github, Share2 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import toast from "react-hot-toast";
 import { footerLinks } from "@/lib/data";
+import { copy } from "@/lib/utils";
 
 const Footer = () => {
     return (
@@ -16,22 +16,12 @@ const Footer = () => {
                 >
                     <Github className="hover:rotate-6 hover:scale-125 hover:cursor-pointer hover:text-secondary" />
                 </Link>
-                <div onClick={copy}>
+                <div onClick={() => copy(footerLinks.url, "Portfolio URL")}>
                     <Share2 className="hover:rotate-6 hover:scale-125 hover:cursor-pointer hover:text-secondary" />
                 </div>
             </div>
         </div>
     );
-};
-
-const copy = async () => {
-    await navigator.clipboard.writeText(`${footerLinks.url}`);
-    toast("Portfolio URL copied to clipboard!", {
-        icon: "📋",
-        style: { padding: "10px", background: "#10b981" },
-        position: "bottom-center",
-        duration: 1500,
-    });
 };
 
 export default Footer;
