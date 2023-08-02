@@ -1,6 +1,6 @@
 export async function getNpOrRpSong() {
     return fetch(
-        `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=jeromeandrewong&api_key=${process.env.LASTFM_API_KEY}&format=json&limit=2`,
+        `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=jeromeandrewong&api_key=${process.env.LASTFM_API_KEY}&format=json`,
         {
             headers: {
                 "Content-Type": "application/json",
