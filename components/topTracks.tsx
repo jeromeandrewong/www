@@ -7,7 +7,6 @@ import { TopTracksResponse } from "@/lib/types";
 import { motion, stagger, useAnimate } from "framer-motion";
 import Link from "next/link";
 import useSWR from "swr";
-import { AnimateStagger } from "./ui/animateStagger";
 
 export const TopTracks = () => {
     const [scope, animate] = useAnimate();

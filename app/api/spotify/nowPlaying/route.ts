@@ -31,7 +31,7 @@ export async function GET(req: NextRequest) {
             headers: {
                 "Content-Type": "application/json",
                 "cache-control":
-                    "public, s-maxage=60, stale-while-revalidate=30",
+                    "public, s-maxage=10, stale-while-revalidate=59",
             },
         },
     );
