@@ -23,7 +23,7 @@ export const contactLinks = [
     },
     {
         poc: "CV",
-        url: "https://drive.google.com/file/d/1q545NHGGgZB-MFQVU6_QlT7ehiN8p8ii/view?usp=sharing",
+        url: "https://drive.google.com/file/d/1BWAHhaM7kouakmIIB4Yahgi2WB6GXpL0/view?usp=drive_link",
         username: "jerome",
     },
     {
