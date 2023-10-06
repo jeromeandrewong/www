@@ -5,6 +5,9 @@ export async function getNpOrRpSong() {
             headers: {
                 "Content-Type": "application/json",
             },
+            next: {
+                revalidate: 3600,
+            },
         },
     );
 }
@@ -16,6 +19,9 @@ export async function getTopArtists() {
             headers: {
                 "Content-Type": "application/json",
             },
+            next: {
+                revalidate: 3600,
+            },
         },
     );
 }
@@ -26,6 +32,9 @@ export async function getTopTracks() {
         {
             headers: {
                 "Content-Type": "application/json",
+            },
+            next: {
+                revalidate: 3600,
             },
         },
     );
