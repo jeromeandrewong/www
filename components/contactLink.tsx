@@ -5,36 +5,38 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, ClipboardCopy } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { Icon } from "@iconify/react";
 
 type ContactLinkProps = {
     poc: string;
     url: string;
     username: string;
+    icon: string;
 };
-const ContactLink = ({ poc, url, username }: ContactLinkProps) => {
+
+const ContactLink = ({ poc, url, username, icon }: ContactLinkProps) => {
     return (
         <motion.div className="text-sm" variants={fadeDownAnimation}>
-            <h1>{poc}</h1>
             <div className="flex text-zinc-500 decoration-wavy hover:cursor-pointer hover:text-secondary hover:underline hover:underline-offset-8">
-                {poc === "Email" ? (
-                    <div
-                        className="flex"
-                        onClick={() => copy(username + "@gmail.com", "Email")}
-                    >
-                        {username}
-                        <ClipboardCopy className="h-5" />
+                <Link
+                    aria-label={poc}
+                    className="flex "
+                    target="_blank"
+                    href={url}
+                >
+                    <div className="flex space-x-1">
+                        <Icon
+                            icon={icon}
+                            width={20}
+                            height={20}
+                            className="text-zinc-500"
+                        />
+                        <h1>{poc}</h1>
                     </div>
-                ) : (
-                    <Link
-                        aria-label={poc}
-                        className="flex "
-                        target="_blank"
-                        href={url}
-                    >
-                        {username}
-                        <ArrowUpRight className="h-5" />
-                    </Link>
-                )}
+
+                    {/* {username} */}
+                    <ArrowUpRight className="h-5" />
+                </Link>
             </div>
         </motion.div>
     );

@@ -27,7 +27,7 @@ export const TopTracks = () => {
     return (
         <div
             ref={scope}
-            className="my-3  flex flex-col gap-y-2  rounded-md border-2 border-secondary/10 p-3"
+            className="my-3  flex flex-col gap-y-2 rounded-md border border-secondary/20 p-3"
         >
             {!data ? (
                 <div id="transform-anim"></div>
