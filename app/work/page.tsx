@@ -79,6 +79,21 @@ const experiences = [
 const projects = [
     {
         description:
+            "Web application that allows users to visualise their holdings, manage a dedicated watchlist, analyze their portfolio performance and compare it with the market",
+        title: "Portfolio Analyzer Dashboard",
+        date: "Sep 2023 - Nov 2023",
+        url: "https://github.com/is442oop/portfolio-analyzer-web-ui",
+        tech: [
+            { link: "java", title: "Java" },
+            { link: "springboot", title: "Springboot" },
+            { link: "typescript", title: "typescript" },
+            { link: "nextjs", title: "Nextjs" },
+            { link: "tailwindcss", title: "Tailwindcss" },
+            { link: "supabase", title: "Supabase" },
+        ],
+    },
+    {
+        description:
             "Award the Most Touching Solution in Build For Good 2023 by Open Government Products (OGP). SafeSpace is an anonymized digital peer support system using zero knowledge proof to help student cope with  mental health challenges.",
         title: "SafeSpace",
         date: "Jun 2023 - Jul 2023",
