@@ -29,7 +29,7 @@ const experiences = [
         location: "Pints AI",
         link: "https://www.pints.ai/",
         role: "Software Engineer Intern",
-        date: "Aug 2023 - Dec 2023",
+        date: "Aug 2023 - Nov 2023",
         tech: [
             { link: "nextjs", title: "Nextjs" },
             { link: "typescript", title: "Typescript" },

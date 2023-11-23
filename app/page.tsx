@@ -74,16 +74,19 @@ const About = () => {
                     in Information Systems and Quantitative Finance.
                 </p>
                 <p>
-                    I have always explored ways to create unique, fluid and
-                    user-centric web solutions. I am familiar with Typescript,
-                    React, and Python. I am currently learning about system
-                    design, growing an interest in C++ and building highly
-                    performant applications.
+                    I enjoy exploring ways to create unique, fluid and
+                    user-centric web solutions and experiences. I have always
+                    had an eye for design and creativity and I am passionate
+                    about operating at the intersection of engineering and
+                    design. Currently more experienced with React, Typescript,
+                    Next.js, Node.js and Tailwind, but always looking to
+                    explore.
                 </p>
                 <p>
-                    Passionate about economics, fitness, cafe hopping, and
-                    competitive poker. I am always up for a quick BFT session,
-                    or to explore the latest trendy and overpriced cafe in town.
+                    Passionate about economics, writing, fitness, cafe hopping,
+                    and competitive poker. I am always up for a quick BFT
+                    session, or to explore the latest trendy and overpriced cafe
+                    in town.
                 </p>
             </div>
         </div>
