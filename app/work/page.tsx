@@ -12,17 +12,17 @@ import React from "react";
 
 const experiences = [
     {
-        location: "AfterClass",
-        link: "https://www.afterclass.io/",
-        role: "Software Engineer",
-        date: "Sep 2023 - Present",
+        location: "Nas io",
+        link: "https://nas.io",
+        role: "Software Engineer Intern",
+        date: "Jan 2024 - May 2024",
         tech: [
             { link: "nextjs", title: "Nextjs" },
             { link: "typescript", title: "Typescript" },
-            { link: "tailwindcss", title: "Tailwindcss" },
-            { link: "supabase", title: "Supabase" },
-            { link: "prisma", title: "Prisma" },
-            { link: "trpc", title: "tRPC" },
+            { link: "cypress", title: "Cypress" },
+            { link: "nodejs", title: "Nodejs" },
+            { link: "aws", title: "AWS" },
+            { link: "mongodb", title: "MongoDB" },
         ],
     },
     {
@@ -70,17 +70,45 @@ const experiences = [
         role: "Software Engineer Intern",
         date: "Nov 2021 - Jan 2022",
         tech: [
-            { link: "react", title: "React" },
-            { link: "javascript", title: "Javascript" },
+            { link: "nextjs", title: "Nextjs" },
+            { link: "tailwindcss", title: "Tailwindcss" },
+            { link: "typescript", title: "Typescript" },
             { link: "figma", title: "Figma" },
+            { link: "Vercel", title: "Vercel" },
         ],
     },
 ];
 const projects = [
     {
         description:
+            "Part of an Open Source Software (OSS) core development team to build a performant information hub (12k MAU) for students to view bidding prices and review modules",
+        title: "AfterClass",
+        date: "Sep 2023 - Present",
+        url: "https://github.com/AfterClass-io/afterclass.io-v2",
+        tech: [
+            { link: "nextjs", title: "Nextjs" },
+            { link: "typescript", title: "Typescript" },
+            { link: "tailwindcss", title: "Tailwindcss" },
+            { link: "supabase", title: "Supabase" },
+            { link: "prisma", title: "Prisma" },
+            { link: "trpc", title: "tRPC" },
+        ],
+    },
+    {
+        description:
+            "A simple password generator that allows users to create customised passwords on the command line based on specific requirements such as length, uppercase/lowercase characters, numbers and special characters.",
+        title: "Password Generator",
+        date: "Dec 2023",
+        url: "https://github.com/jeromeandrewong/password-generator",
+        tech: [
+            { link: "go", title: "Go" },
+            { link: "terminal", title: "Terminal" },
+        ],
+    },
+    {
+        description:
             "Web application that allows users to visualise their holdings, manage a dedicated watchlist, analyze their portfolio performance and compare it with the market",
-        title: "Portfolio Analyzer Dashboard",
+        title: "Portfolio Analyzer",
         date: "Sep 2023 - Nov 2023",
         url: "https://github.com/is442oop/portfolio-analyzer-web-ui",
         tech: [
@@ -94,22 +122,7 @@ const projects = [
     },
     {
         description:
-            "Web application that allows users to visualise their holdings, manage a dedicated watchlist, analyze their portfolio performance and compare it with the market",
-        title: "Portfolio Analyzer Dashboard",
-        date: "Sep 2023 - Nov 2023",
-        url: "https://github.com/is442oop/portfolio-analyzer-web-ui",
-        tech: [
-            { link: "java", title: "Java" },
-            { link: "springboot", title: "Springboot" },
-            { link: "typescript", title: "typescript" },
-            { link: "nextjs", title: "Nextjs" },
-            { link: "tailwindcss", title: "Tailwindcss" },
-            { link: "supabase", title: "Supabase" },
-        ],
-    },
-    {
-        description:
-            "Awarded the Most Touching Solution in Build For Good 2023 by Open Government Products (OGP). SafeSpace is an anonymized digital peer support system using zero knowledge proof to help student cope with  mental health challenges.",
+            "Awarded the Most Touching Solution in Build For Good 2023 by Open Government Products (OGP). SafeSpace is an anonymized digital peer support system to help students cope with mental health challenges.",
         title: "SafeSpace",
         date: "Jun 2023 - Jul 2023",
         url: "https://github.com/jeromeandrewong/BFG-SafeSpace",
@@ -117,11 +130,12 @@ const projects = [
             { link: "python", title: "Python" },
             { link: "aws", title: "AWS" },
             { link: "mongodb", title: "MongoDB" },
+            { link: "telegram", title: "Telegram" },
         ],
     },
     {
         description:
-            "Finalist for VMWare Tanzu Award (Top 3 in cohort). GoBook is a booking application that manages classes and users for a company where users can browse and book classes, get class recommendations for classes and write reviews using microservice architecture.",
+            "Adopted micro-service architecture to architect a class booking and reviewing application, awarded VMWare Tanzu Award Finalist (Top 3 in school cohort)",
         title: "GoBook",
         date: "Feb 2023 - Mar 2023",
         url: "https://github.com/jeromeandrewong/GoBook-Frontend",
@@ -186,7 +200,7 @@ const ProjectSection = () => {
                 </div>
             </div>
             <AnimateStagger>
-                <div className="flex flex-col gap-3 text-sm text-primary_text dark:text-dark_primary_text">
+                <div className="grid grid-cols-2 gap-3 text-sm text-primary_text dark:text-dark_primary_text xl:grid-cols-2">
                     {projects.map((project, index) => {
                         return (
                             <Link
@@ -196,59 +210,56 @@ const ProjectSection = () => {
                             >
                                 <motion.div
                                     variants={fadeDownAnimation}
-                                    className="rounded-md border border-secondary/20 px-2 py-2 hover:bg-secondary/10 sm:px-5"
+                                    className="h-full w-full rounded-md border border-secondary/20 px-2 py-2 hover:bg-secondary/10 sm:px-5"
                                 >
-                                    <div className="flex items-center justify-between py-2">
-                                        <div className="flex flex-col gap-y-3">
-                                            <div className="flex items-center justify-between gap-x-3 text-xs sm:text-base">
-                                                <div className="font-bold">
-                                                    {project.title}
+                                    <div className="flex h-full items-center justify-between py-2">
+                                        <div className="flex h-full w-full flex-col justify-between gap-y-5">
+                                            <div className="space-y-3">
+                                                <div className="flex flex-col items-center justify-between gap-x-3 text-xs sm:text-base">
+                                                    <div className="font-bold">
+                                                        {project.title}
+                                                    </div>
+                                                    <div className="text-xs text-zinc-500">
+                                                        {project.date}
+                                                    </div>
                                                 </div>
-                                                <div className="text-xs text-zinc-500">
-                                                    {project.date}
+                                                <div className="text-xs text-zinc-400 sm:text-sm">
+                                                    {project.description}
                                                 </div>
                                             </div>
-                                            <div className="text-xs sm:text-sm">
-                                                {project.description}
-                                            </div>
-                                            <div className="mt-2">
-                                                <div className="flex justify-end gap-x-2">
-                                                    {project.tech.map(
-                                                        (tech, index) => {
-                                                            return (
-                                                                <div
-                                                                    key={index}
-                                                                    className="flex items-center justify-center hover:cursor-pointer"
-                                                                >
-                                                                    <TooltipProvider>
-                                                                        <Tooltip>
-                                                                            <TooltipTrigger>
-                                                                                <Image
-                                                                                    className="duration-200 hover:scale-105"
-                                                                                    src={`/tech/${tech.link}.svg`}
-                                                                                    alt=""
-                                                                                    width={
-                                                                                        30
-                                                                                    }
-                                                                                    height={
-                                                                                        30
-                                                                                    }
-                                                                                />
-                                                                            </TooltipTrigger>
-                                                                            <TooltipContent>
-                                                                                <p className="">
-                                                                                    {
-                                                                                        tech.title
-                                                                                    }
-                                                                                </p>
-                                                                            </TooltipContent>
-                                                                        </Tooltip>
-                                                                    </TooltipProvider>
-                                                                </div>
-                                                            );
-                                                        },
-                                                    )}
-                                                </div>
+
+                                            <div className="flex justify-end gap-x-2">
+                                                {project.tech.map(
+                                                    (tech, index) => {
+                                                        return (
+                                                            <div
+                                                                key={index}
+                                                                className="flex items-center justify-center hover:cursor-pointer"
+                                                            >
+                                                                <TooltipProvider>
+                                                                    <Tooltip>
+                                                                        <TooltipTrigger>
+                                                                            <Image
+                                                                                className="h-8 w-8 p-0.5 duration-200 hover:scale-105"
+                                                                                src={`/tech/${tech.link}.svg`}
+                                                                                alt=""
+                                                                                width="20"
+                                                                                height="20"
+                                                                            />
+                                                                        </TooltipTrigger>
+                                                                        <TooltipContent>
+                                                                            <p className="">
+                                                                                {
+                                                                                    tech.title
+                                                                                }
+                                                                            </p>
+                                                                        </TooltipContent>
+                                                                    </Tooltip>
+                                                                </TooltipProvider>
+                                                            </div>
+                                                        );
+                                                    },
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -318,14 +329,14 @@ const ExperienceSection = () => {
                                                                 <Tooltip>
                                                                     <TooltipTrigger>
                                                                         <Image
-                                                                            className=" duration-200 hover:scale-105 hover:grayscale-0 "
+                                                                            className="h-8 w-8 p-0.5 duration-200 hover:scale-105 hover:grayscale-0 "
                                                                             src={`/tech/${tech.link}.svg`}
                                                                             alt=""
                                                                             width={
-                                                                                30
+                                                                                20
                                                                             }
                                                                             height={
-                                                                                30
+                                                                                20
                                                                             }
                                                                         />
                                                                     </TooltipTrigger>
