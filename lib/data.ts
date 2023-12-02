@@ -15,7 +15,7 @@ export const contactLinks = [
     },
     {
         poc: "Devlogs",
-        url: "https://builds.jeromeandre.dev",
+        url: "https://docs.jeromeandre.dev",
         username: "jeromewongjh",
         icon: "mdi:pencil-box-outline",
     },
@@ -53,11 +53,6 @@ export const navLinks = [
         title: "Work",
         href: "/work",
         icon: TerminalSquare,
-    },
-    {
-        title: "Blog",
-        href: "/blog",
-        icon: Pencil,
     },
     {
         title: "Spotify",
