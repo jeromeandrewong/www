@@ -311,7 +311,7 @@ const ExperienceSection = () => {
                                     className="rounded-md border border-secondary/20 px-2 py-2 hover:bg-secondary/10 sm:px-5"
                                 >
                                     <div className="flex items-center justify-between py-2">
-                                        <div className="flex items-center gap-x-2">
+                                        <div className="flex items-center gap-x-3">
                                             <Image
                                                 className="h-12 w-12 rounded-md"
                                                 src={exp.logo}
