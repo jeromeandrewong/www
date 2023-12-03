@@ -17,13 +17,15 @@ module.exports = {
         },
         extend: {
             colors: {
-                primary: "#f7f6f3",
+                primary: "#FFFFFF",
+                // primary: "#f7f6f3",
                 primary_text: "#27272a",
                 // secondary: "#047857",
                 // accent: "#4f46e5",
                 dark_primary: "#18181b",
                 dark_primary_text: "#f7f6f3",
-                secondary: "#10b981",
+                secondary: "#0A66C2",
+                // secondary: "#10b981",
                 accent: "#7c3aed",
             },
             keyframes: {

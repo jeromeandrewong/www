@@ -13,6 +13,7 @@ import React from "react";
 const experiences = [
     {
         location: "Nas io",
+        logo: "/companies/nas.jpeg",
         link: "https://nas.io",
         role: "Software Engineer Intern",
         date: "Jan 2024 - May 2024",
@@ -27,6 +28,7 @@ const experiences = [
     },
     {
         location: "Pints AI",
+        logo: "/companies/pints.jpeg",
         link: "https://www.pints.ai/",
         role: "Software Engineer Intern",
         date: "Aug 2023 - Nov 2023",
@@ -41,6 +43,7 @@ const experiences = [
     },
     {
         location: "Oceanus Group",
+        logo: "/companies/oceanus.jpeg",
         link: "https://oceanus.com.sg/",
         role: "Software Engineer Intern",
         date: "Jan 2023 - Apr 2023",
@@ -55,6 +58,7 @@ const experiences = [
     },
     {
         location: "Hire Digital",
+        logo: "/companies/hiredigital.jpeg",
         link: "https://hiredigital.com/",
         role: "Software Engineer Intern",
         date: "May 2022 - Aug 2022",
@@ -66,6 +70,7 @@ const experiences = [
     },
     {
         location: "XSQUARE Tuition Centre",
+        logo: "/companies/xsquare.jpeg",
         link: "https://www.xsquareclass.co/",
         role: "Software Engineer Intern",
         date: "Nov 2021 - Jan 2022",
@@ -74,17 +79,18 @@ const experiences = [
             { link: "tailwindcss", title: "Tailwindcss" },
             { link: "typescript", title: "Typescript" },
             { link: "figma", title: "Figma" },
-            { link: "Vercel", title: "Vercel" },
+            { link: "vercel", title: "Vercel" },
         ],
     },
 ];
 const projects = [
     {
         description:
-            "Part of an Open Source Software (OSS) core development team to build a performant information hub (12k MAU) for students to view bidding prices and review modules",
+            "Part of an Open Source Software (OSS) core development team to build a performant information hub (12k MAU) for students to view bidding prices and review modules.",
         title: "AfterClass",
         date: "Sep 2023 - Present",
         url: "https://github.com/AfterClass-io/afterclass.io-v2",
+
         tech: [
             { link: "nextjs", title: "Nextjs" },
             { link: "typescript", title: "Typescript" },
@@ -107,7 +113,7 @@ const projects = [
     },
     {
         description:
-            "Web application that allows users to visualise their holdings, manage a dedicated watchlist, analyze their portfolio performance and compare it with the market",
+            "Web application that allows users to visualise their holdings, manage a dedicated watchlist, analyze their portfolio performance and compare it with the market.",
         title: "Portfolio Analyzer",
         date: "Sep 2023 - Nov 2023",
         url: "https://github.com/is442oop/portfolio-analyzer-web-ui",
@@ -135,7 +141,7 @@ const projects = [
     },
     {
         description:
-            "Adopted micro-service architecture to architect a class booking and reviewing application, awarded VMWare Tanzu Award Finalist (Top 3 in school cohort)",
+            "Adopted micro-service architecture to architect a class booking and reviewing application, awarded VMWare Tanzu Award Finalist (Top 3 in school cohort).",
         title: "GoBook",
         date: "Feb 2023 - Mar 2023",
         url: "https://github.com/jeromeandrewong/GoBook-Frontend",
@@ -151,7 +157,7 @@ const projects = [
     },
     {
         description:
-            "All-in-one university focused web-based application for students where users can browse modules, check class timings, and add modules to their timetable through our application’s UI",
+            "All-in-one university focused web-based application for students where users can browse modules, check class timings, and add modules to their timetable through our application’s UI.",
         title: "PlanMyMods",
         date: "Oct 2022 - Nov 2022",
         url: "https://github.com/PlanMyMods/web-frontend",
@@ -168,8 +174,6 @@ const Work = () => {
         <div className="mt-10">
             <ExperienceSection />
             <ProjectSection />
-            {/* TODO: Tools section */}
-            {/* <ToolSection /> */}
         </div>
     );
 };
@@ -179,14 +183,14 @@ export default Work;
 const ProjectSection = () => {
     return (
         <div className=" w-full p-3">
-            <div className="mb-4 flex items-center gap-x-3 rounded-md bg-secondary/20 p-5 text-lg  font-bold text-secondary">
+            <div className="mb-4 flex items-center gap-x-3 rounded-md border border-secondary bg-secondary/20 p-5 text-lg font-bold text-secondary">
                 <Code2 />
                 <div>
                     <div>Projects</div>
-                    <div className="text-sm font-normal text-zinc-500">
+                    <div className="text-sm font-normal text-zinc-500 dark:text-zinc-400">
                         Full list of projects on{` `}
                         <Link
-                            className="text-secondary underline decoration-wavy underline-offset-4"
+                            className="font-bold text-secondary underline decoration-wavy underline-offset-4"
                             href={
                                 contactLinks.find(
                                     (link) => link.poc === "Github",
@@ -223,7 +227,7 @@ const ProjectSection = () => {
                                                         {project.date}
                                                     </div>
                                                 </div>
-                                                <div className="text-xs text-zinc-400 sm:text-sm">
+                                                <div className="text-xs  sm:text-sm">
                                                     {project.description}
                                                 </div>
                                             </div>
@@ -272,17 +276,18 @@ const ProjectSection = () => {
         </div>
     );
 };
+
 const ExperienceSection = () => {
     return (
-        <div className=" w-full p-3">
-            <div className="mb-4 flex items-center gap-x-3 rounded-md bg-secondary/20 p-5 text-lg  font-bold text-secondary">
+        <div className="w-full p-3">
+            <div className="mb-4 flex items-center gap-x-3 rounded-md border border-secondary bg-secondary/20 p-5 text-lg  font-bold text-secondary">
                 <Briefcase />
                 <div>
                     <div>Experiences</div>
-                    <div className="text-sm font-normal text-zinc-500">
+                    <div className="text-sm font-normal text-zinc-500 dark:text-zinc-400">
                         View my{" "}
                         <Link
-                            className="text-secondary underline decoration-wavy underline-offset-4"
+                            className="font-bold text-secondary underline decoration-wavy underline-offset-4"
                             href={
                                 contactLinks.find(
                                     (link) => link.poc === "Linkedin",
@@ -306,15 +311,24 @@ const ExperienceSection = () => {
                                     className="rounded-md border border-secondary/20 px-2 py-2 hover:bg-secondary/10 sm:px-5"
                                 >
                                     <div className="flex items-center justify-between py-2">
-                                        <div>
-                                            <div className="text-xs font-bold sm:text-lg">
-                                                {exp.role}
-                                            </div>
-                                            <div className="text-xs text-secondary sm:text-base">
-                                                {exp.location}
-                                            </div>
-                                            <div className="text-xs text-zinc-500">
-                                                {exp.date}
+                                        <div className="flex items-center gap-x-2">
+                                            <Image
+                                                className="h-12 w-12 rounded-md"
+                                                src={exp.logo}
+                                                alt=""
+                                                width="50"
+                                                height="50"
+                                            />
+                                            <div>
+                                                <div className="text-xs font-bold text-secondary sm:text-base">
+                                                    {exp.location}
+                                                </div>
+                                                <div className="text-xs font-bold sm:text-base">
+                                                    {exp.role}
+                                                </div>
+                                                <div className="text-xs text-zinc-500">
+                                                    {exp.date}
+                                                </div>
                                             </div>
                                         </div>
                                         <div>
@@ -364,19 +378,3 @@ const ExperienceSection = () => {
         </div>
     );
 };
-// const ToolSection = () => {
-//     return (
-//         <div className=" w-full p-3">
-//             <div className="mb-4 flex items-center gap-x-3 rounded-md bg-secondary/20 p-5 text-lg  font-bold text-secondary">
-//                 <Laptop />
-//                 <div>
-//                     {" "}
-//                     <div>Tools</div>
-//                     <div className="text-sm font-normal text-zinc-500">
-//                         Devtools I use daily
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };

@@ -3,6 +3,7 @@ import { NowPlayingResponse } from "@/lib/types";
 import { Activity } from "lucide-react";
 import useSWR from "swr";
 import Image from "next/image";
+import Loading from "@/app/loading";
 export const NowPlaying = () => {
     const { data } = useSWR<NowPlayingResponse>(
         "/api/spotify/nowPlaying",
@@ -13,7 +14,7 @@ export const NowPlaying = () => {
         ""
     ) : (
         <div className="mt-10 pt-3">
-            <div className="flex w-full justify-between rounded-md bg-secondary/10 p-3">
+            <div className="flex w-full justify-between rounded-md border border-secondary bg-secondary/10 p-3">
                 <div className="flex flex-col justify-between">
                     {/* now playing header*/}
                     <div className="flex gap-x-2">

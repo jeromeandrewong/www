@@ -1,5 +1,4 @@
 export default function Loading() {
-    // Or a custom loading skeleton component
     return (
         <div className="flex h-[50vh] items-center justify-center">
             <div className="relative flex w-10 justify-between">

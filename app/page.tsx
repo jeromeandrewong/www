@@ -11,7 +11,6 @@ export default function Home() {
             <Profile />
             <Contact />
             <About />
-            {/* <Footer /> */}
             <Toaster />
         </div>
     );
@@ -19,11 +18,11 @@ export default function Home() {
 
 const Profile = () => {
     return (
-        <div className="flex w-full gap-x-3 rounded-lg border border-secondary/20 p-5">
+        <div className="flex w-full gap-x-3 rounded-lg border border-secondary p-5">
             <div className="flex items-center justify-center">
                 <Image
                     alt="profile picture"
-                    className="rounded-full grayscale hover:cursor-alias hover:filter-none"
+                    className="rounded-full"
                     src="/pp.jpg"
                     width="44"
                     height="44"
@@ -43,7 +42,7 @@ const Profile = () => {
 
 const Contact = () => {
     return (
-        <div className=" w-full rounded-lg border border-secondary/20 p-5">
+        <div className=" w-full rounded-lg border border-secondary p-5">
             <h1 className=" mb-4 text-lg text-secondary">Contact</h1>
             <AnimateStagger>
                 <div className="grid grid-cols-2 gap-3 xl:grid-cols-3">
@@ -66,12 +65,12 @@ const Contact = () => {
 
 const About = () => {
     return (
-        <div className=" w-full rounded-lg border border-secondary/20 p-5">
+        <div className=" w-full rounded-lg border border-secondary p-5">
             <h1 className=" mb-4 text-lg text-secondary">About Me</h1>
             <div className="flex flex-col gap-4 text-sm text-primary_text dark:text-dark_primary_text">
                 <p>
                     Junior at Singapore Management University, pursuing a major
-                    in Information Systems and Quantitative Finance.
+                    in Information Systems.
                 </p>
                 <p>
                     I enjoy exploring ways to create unique, fluid and
