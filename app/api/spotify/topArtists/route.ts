@@ -13,7 +13,6 @@ export async function GET(req: NextRequest) {
     const response = await resp.json();
 
     const artists = response.topartists.artist;
-
     const topArtists = artists.map((artist: any) => {
         return {
             name: artist.name,

@@ -3,7 +3,6 @@ import { NowPlayingResponse } from "@/lib/types";
 import { Activity } from "lucide-react";
 import useSWR from "swr";
 import Image from "next/image";
-import Loading from "@/app/loading";
 export const NowPlaying = () => {
     const { data } = useSWR<NowPlayingResponse>(
         "/api/spotify/nowPlaying",

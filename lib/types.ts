@@ -28,3 +28,10 @@ export type SiteConfig = {
         twitter: string;
     };
 };
+
+export type ChartData = {
+    name: string;
+    value: number;
+    href: string;
+    icon: () => JSX.Element;
+};

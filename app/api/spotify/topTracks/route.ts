@@ -11,7 +11,6 @@ export async function GET(req: NextRequest) {
     }
 
     const response = await resp.json();
-
     const tracks = response.toptracks.track;
 
     const topTracks = tracks.map((track: any) => {

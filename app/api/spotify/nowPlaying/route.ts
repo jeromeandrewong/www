@@ -17,7 +17,6 @@ export async function GET(req: NextRequest) {
     const artistName: string = song.artist["#text"];
     const songURL: string = song.url;
     const imageURL: string = song.image[3]["#text"];
-
     return new Response(
         JSON.stringify({
             isPlaying,

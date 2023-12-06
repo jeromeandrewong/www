@@ -1,15 +1,16 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import fetcher from "@/lib/fetcher";
-import { fadeDownAnimation } from "@/lib/framerMotionVariants";
-import { TopTracksResponse } from "@/lib/types";
-import { motion, stagger, useAnimate } from "framer-motion";
-import Link from "next/link";
+import { ChartData, TopTracksResponse } from "@/lib/types";
+import { stagger, useAnimate } from "framer-motion";
 import useSWR from "swr";
+import { BarList } from "@tremor/react";
+import { Disc3 } from "lucide-react";
 
 export const TopTracks = () => {
     const [scope, animate] = useAnimate();
+    const [chartData, setChartData] = useState<ChartData[] | []>([]);
 
     const { data, isLoading } = useSWR<TopTracksResponse[]>(
         "/api/spotify/topTracks",
@@ -17,14 +18,27 @@ export const TopTracks = () => {
     );
 
     useEffect(() => {
+        if (data)
+            setChartData(
+                data.map((track) => {
+                    return {
+                        name: track.name + " - " + track.artist,
+                        value: parseInt(track.playcount),
+                        href: track.url,
+                        icon: () => <Disc3 className="mr-2.5" />,
+                    };
+                }),
+            );
+    }, [data]);
+
+    useEffect(() => {
         !isLoading &&
             animate(
                 "#transform-anim",
-                { opacity: [0, 1], y: [20, 0] },
-                { duration: 0.5, ease: "easeIn", delay: stagger(0.2) },
+                { opacity: [0, 1] },
+                { duration: 0.5, ease: "easeOut", delay: stagger(0.2) },
             );
     });
-
     return (
         !isLoading && (
             <div
@@ -39,37 +53,14 @@ export const TopTracks = () => {
                             <div className="text-xl font-bold">Top Tracks</div>
                             <p className="text-zinc-500">Over the last month</p>
                         </div>
-                        {data.map((track, index) => (
-                            <Link
+                        <div>
+                            <BarList
                                 id="transform-anim"
-                                key={index}
-                                href={track.url}
-                                target="_blank"
-                            >
-                                <motion.div
-                                    variants={fadeDownAnimation}
-                                    className="flex justify-between rounded-md px-2 py-3 duration-200 hover:scale-[102%] hover:bg-secondary/10"
-                                >
-                                    <div className="max-w-[70%]">
-                                        {track.name}
-                                        {/* <p classNa<me="flex items-baseline text-sm text-zinc-500"> */}
-                                        <span className="pl-2 text-zinc-500">
-                                            {track.artist}
-                                        </span>
-                                        {/* </p> */}
-                                    </div>
-
-                                    <div className="flex items-center">
-                                        <div>
-                                            {track.playcount}
-                                            <span className="text-zinc-500">
-                                                {` `}plays
-                                            </span>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            </Link>
-                        ))}
+                                data={chartData}
+                                className="mt-2"
+                                showAnimation={true}
+                            />
+                        </div>
                     </>
                 )}
             </div>

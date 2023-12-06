@@ -1,4 +1,4 @@
-import { Home, TerminalSquare, Pencil, Headphones } from "lucide-react";
+import { Home, TerminalSquare, Headphones } from "lucide-react";
 
 export const contactLinks = [
     {
@@ -62,21 +62,21 @@ export const navLinks = [
 ];
 
 export const experiences = [
-    {
-        location: "Nas io",
-        logo: "/companies/nas.jpeg",
-        link: "https://nas.io",
-        role: "Software Engineer Intern",
-        date: "Jan 2024 - May 2024",
-        tech: [
-            { link: "nextjs", title: "Nextjs" },
-            { link: "typescript", title: "Typescript" },
-            { link: "cypress", title: "Cypress" },
-            { link: "nodejs", title: "Nodejs" },
-            { link: "aws", title: "AWS" },
-            { link: "mongodb", title: "MongoDB" },
-        ],
-    },
+    // {
+    //     location: "Nas io",
+    //     logo: "/companies/nas.jpeg",
+    //     link: "https://nas.io",
+    //     role: "Software Engineer Intern",
+    //     date: "Jan 2024 - May 2024",
+    //     tech: [
+    //         { link: "nextjs", title: "Nextjs" },
+    //         { link: "typescript", title: "Typescript" },
+    //         { link: "cypress", title: "Cypress" },
+    //         { link: "nodejs", title: "Nodejs" },
+    //         { link: "aws", title: "AWS" },
+    //         { link: "mongodb", title: "MongoDB" },
+    //     ],
+    // },
     {
         location: "Pints AI",
         logo: "/companies/pints.jpeg",
