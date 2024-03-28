@@ -13,20 +13,26 @@ export async function GET(req: NextRequest) {
     const response = await resp.json();
     const tracks = response.toptracks.track;
 
-    const topTracks = tracks.map((track: any) => {
-        return {
-            name: track.name,
-            playcount: track.playcount,
-            url: track.url,
-            artist: track.artist.name,
-        };
-    });
+    const topTracks = tracks.map(
+        (track: {
+            name: string;
+            playcount: string;
+            url: string;
+            artist: { name: string };
+        }) => {
+            return {
+                name: track.name,
+                playcount: track.playcount,
+                url: track.url,
+                artist: track.artist.name,
+            };
+        },
+    );
 
     return new Response(JSON.stringify(topTracks), {
         status: 200,
         headers: {
             "Content-Type": "application/json",
-            "cache-control": "public, s-maxage=10, stale-while-revalidate=59",
         },
     });
 }

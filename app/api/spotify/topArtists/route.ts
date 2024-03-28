@@ -25,7 +25,6 @@ export async function GET(req: NextRequest) {
         status: 200,
         headers: {
             "Content-Type": "application/json",
-            "cache-control": "public, s-maxage=10, stale-while-revalidate=59",
         },
     });
 }
